@@ -1,0 +1,142 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+body {
+    background-image: url("fondo.png"); 
+    background-repeat: no-repeat; /* hace que la imagen no se repita, pasa cuando no ocupa toda la pantalla */
+    background-size: cover; /* hace que la imagen ocupe toda la pantalla */
+    background-position: center; /* centra la imagen */
+    background-attachment: fixed; /* creo que centra la imagen, en el caso de que sobresalga por arriba o abajo */
+}
+
+.borroso {
+    backdrop-filter: blur(50px);
+    width: 400px;
+    height: 300px; 
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Uso misma imagen para ver las diferencias en las transiciones */
+.img2 {
+    width: 10%;
+    animation: fadeIn 5s ease-out;
+}
+.img3 {
+    width: 10%;
+    animation: fadeIn 5s ease-in;
+}
+.img4 {
+    width: 10%;
+    animation: fadeIn 20s steps(10);
+}
+
+@keyframes fadeIn { /* creando el efecto "fadeIn" lo puedo nombrar como quiera, así tiene sentido */
+    0% { /* este efecto hace aparecer la imagen poco a poco */
+    opacity: 0;
+    filter: blur(20px); 
+    }
+
+    10% {
+    opacity: 1;
+    filter: brightness(2) blur(10px);
+    }
+}
+
+/* EXPLICACION EFECTO
+https://youtu.be/jZB60RJZCqE */
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS MIOS DE OTRO ARCHIVO PA PROBAR */
+
+/* Hacer que un texto tenga un efecto de movimiento linear-gradient de fondo */
+.gradiente {
+    background: linear-gradient(to right, darkgreen, coral, darkblue);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+    width: 60%;
+    height: 30%;
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 60%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 60%;}
+}
+
+/* Un texto que tenga de fondo una imagen */
+.imgfondo {
+    background-image: url("pantalla.jpg");
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* .videofondo {
+    background-image: url("");
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+} */
+
+/* Menú vertical que se desplega suavemente */
+.container {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    gap: 5px;
+}
+
+.container img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    transition: linear 0.5s;
+    cursor: pointer;
+}
+
+.container img:hover {
+    width: 100%;
+}
+
+
+/* Esto nos permite hacer que una foto pase de estar a color a blanco y negro */
+
+/* hover, esto se usa para las propiedas de estilo que queremos añadir cuando el cursor esta POR ENCIMA del 
+div u objeto al que se le aplica la propiedad, cuando el cursor no está por encima del div, éste vuelve a valores
+CSS originales */
+
+.filtrogris {
+    filter: grayscale(0%);
+    margin-top: 1em;
+    border-radius: 10px;
+    width: 700px;
+}           /* USAR EL brightness para los efectos de la pagina principal que queda muy bien, se iluminan las fotos con 
+hover cuando se ponen por encima el cursor */
+
+.filtrogris:hover {
+    filter: drop-shadow(10px 10px 10px black) grayscale(100%);
+    transition: 0.5s ease-in;
+}
+
+
+
