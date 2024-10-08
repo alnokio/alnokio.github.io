@@ -1,0 +1,63 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 100px;
+}
+
+body {
+    background-image: url("../images/patron.png"); /* selecciona imagen de fondo */
+    background-repeat: no-repeat; /* hace que la imagen no se repita, pasa cuando no ocupa toda la pantalla */
+    background-size: cover; /* hace que la imagen ocupe toda la pantalla */
+    background-position: center; /* centra la imagen */
+    background-attachment: fixed; /* creo que centra la imagen, en el caso de que sobresalga por arriba o abajo */
+}
+
+.login {
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px); /* hace borroso el fondo del div */
+    width: 16em;
+    height: 9em; 
+    border-style: solid; /* border de estilo solido, predeterminado negro */
+    border-radius: 10px; /* redondeado del borde, esquina */
+    border-width: 2px; /* ancho del borde */
+    text-align: center; /* centra todo texto que haya dentro del div */
+    margin: auto;
+    margin-top: 1em; /* margen de 1em con el div de arriba */
+    margin-bottom: 1em; /* margen de 1em con el div de abajo */
+}
+
+
+img {
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    animation: fadeIn 9s ease-in; /* esto es para darle fluidez, también se puede usar (transition), el "ease-in" es un
+    tipo de transicion, ease, ease-out, linear y otras, ease-in define que la transicion se acelere al final */
+}
+
+.img2 {
+    animation: fadeIn 9s ease-out;
+}
+.img3 {
+    animation: fadeIn 9s ease-in-out;
+}
+.img4 {
+    animation: fadeIn 29s steps(10);
+}
+
+@keyframes fadeIn { /* con esto estaría creando el efecto "fadeIn" lo puedo nombrar como me de la gana, pero así, tiene sentido */
+    0% { /* este efecto hace aparecer la imagen poco a poco */
+    opacity: 0;
+    filter: blur(20px); 
+    }
+
+    10% {
+    opacity: 1;
+    filter: brightness(2) blur(10px);
+    }
+}
+/* EXPLICACION EFECTO
+https://youtu.be/jZB60RJZCqE */
