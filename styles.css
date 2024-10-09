@@ -5,12 +5,44 @@
     font-size: x-large;
 }
 
+.rojo {
+    width: 30px;
+    background-color: brown;
+}
+
+.azul {
+    width: 30px;
+    background-color: rgb(2, 23, 31);
+}
+
+.verde {
+    width: 30px;
+    background-color:lightgreen;
+}
+
+.amarillo {
+    width: 30px;
+    background-color: gold;
+}
+
 body {
-    background-image: url("fondo.png"); 
-    background-repeat: no-repeat; /* hace que la imagen no se repita, pasa cuando no ocupa toda la pantalla */
-    background-size: cover; /* hace que la imagen ocupe toda la pantalla */
-    background-position: center; /* centra la imagen */
-    background-attachment: fixed; /* creo que centra la imagen, en el caso de que sobresalga por arriba o abajo */
+    background-image: url("img/piramide.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+@keyframes gradient {
+    0% {background-position: 0% 60%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 60%;}
+}
+
+.slide {
+    width: 400px;
+
 }
 
 .borroso {
@@ -26,7 +58,7 @@ body {
 /* Uso misma imagen para ver las diferencias en las transiciones */
 .img2 {
     width: 10%;
-    animation: fadeIn 5s ease-out;
+    animation: fadeIn 5s step-end;
 }
 .img3 {
     width: 10%;
@@ -34,7 +66,7 @@ body {
 }
 .img4 {
     width: 10%;
-    animation: fadeIn 20s steps(10);
+    animation: fadeIn 20s steps(5);
 }
 
 @keyframes fadeIn { /* creando el efecto "fadeIn" lo puedo nombrar como quiera, así tiene sentido */
@@ -82,7 +114,7 @@ https://youtu.be/jZB60RJZCqE */
 
 /* Un texto que tenga de fondo una imagen */
 .imgfondo {
-    background-image: url("pantalla.jpg");
+    background-image: url("img/pantalla.jpg");
     background-size: cover;
     background-clip: text;
     color: transparent;
@@ -104,7 +136,7 @@ https://youtu.be/jZB60RJZCqE */
     gap: 5px;
 }
 
-.container img {
+.container .rojo.azul.amarillo.verde {
     width: 10%;
     height: 100%;
     object-fit: cover;
@@ -114,29 +146,7 @@ https://youtu.be/jZB60RJZCqE */
     cursor: pointer;
 }
 
-.container img:hover {
+.container .rojo, .azul, .amarillo, .verde:hover {
     width: 100%;
 }
-
-
-/* Esto nos permite hacer que una foto pase de estar a color a blanco y negro */
-
-/* hover, esto se usa para las propiedas de estilo que queremos añadir cuando el cursor esta POR ENCIMA del 
-div u objeto al que se le aplica la propiedad, cuando el cursor no está por encima del div, éste vuelve a valores
-CSS originales */
-
-.filtrogris {
-    filter: grayscale(0%);
-    margin-top: 1em;
-    border-radius: 10px;
-    width: 700px;
-}           /* USAR EL brightness para los efectos de la pagina principal que queda muy bien, se iluminan las fotos con 
-hover cuando se ponen por encima el cursor */
-
-.filtrogris:hover {
-    filter: drop-shadow(10px 10px 10px black) grayscale(100%);
-    transition: 0.5s ease-in;
-}
-
-
 
