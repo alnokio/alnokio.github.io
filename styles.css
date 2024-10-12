@@ -26,11 +26,7 @@
 }
 
 body {
-    background-image: url("img/piramide.png");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-color: blanchedalmond;
 }
 
 
@@ -87,7 +83,11 @@ https://youtu.be/jZB60RJZCqE */
 
 
 
+.enlace {
+    border: 3px solid black;
+    border-radius: 50%;
 
+}
 
 
 
