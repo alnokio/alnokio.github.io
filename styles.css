@@ -36,10 +36,10 @@ body {
     100% {background-position: 0% 60%;}
 }
 
-.slide {
+/* .slide {
     width: 400px;
 
-}
+} */
 
 .borroso {
     backdrop-filter: blur(50px);
