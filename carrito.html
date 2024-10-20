@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta author="Antonio Jesús Reyes Vera">
+    <meta content="seo, camisetas, ropa, chandal, algodon, calidad, precio, barato, barata">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="./img/camiseta.png"> <!-- cambiar icono web -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Carrito</title>
+</head>
+<body>
+    
+    <header> 
+        <nav>
+            <a href="./index.html">inicio</a>
+            <a href="./carrito.html">carrito</a>
+            <a href="./productos.html">productos</a>
+            <a href="./login.html">iniciar sesion</a>
+        </nav>
+    </header>
+
+    <section class="cart">
+        <h2>Carrito de Compra</h2>
+
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="ropa/IMG-20241003-WA0110.jpg" alt="Camiseta Roja">
+                <div class="item-details">
+                    <h3>Chandal Alemania</h3>
+                    <p>Precio: $20.00</p>
+                </div>
+                <input type="number" value="1" min="1">
+                <button class="remove-btn">Eliminar</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="ropa/IMG-20241003-WA0115.jpg" alt="Camiseta Azul">
+                <div class="item-details">
+                    <h3>Chandal Argentina</h3>
+                    <p>Precio: $22.00</p>
+                </div>
+                <input type="number" value="2" min="1">
+                <button class="remove-btn">Eliminar</button>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Resumen del Carrito</h3>
+            <p><strong>Total: $68.00</strong></p>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <footer>
+        Copyright 2024. Todos los derechos reservados
+      </footer>
+    
+    
+</body>
+</html>
