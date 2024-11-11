@@ -13,7 +13,7 @@ body {
   
   header {
     height: 500px;
-    background-image: url("img/borroso3.jpg");
+    background-image: url("../img/borroso3.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
