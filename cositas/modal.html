@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* Estilos generales del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1; /* Aparece encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+/* Contenido del modal */
+.contenido_modal {
+  background-color: #fff;
+  margin: 15% auto; /* Centrado vertical y horizontal */
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%; /* Tamaño del modal */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de cierre */
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="divmodal" class="modal">
+        <div class="contenido_modal">
+          <span class="close">&times;</span>
+          <h2>Título del Modal</h2>
+          <p>Este es el contenido del modal.</p>
+        </div>
+      </div>
+      
+      <button id="openModal">Abrir Modal</button>
+      
+    <script>
+        // Seleccionar elementos
+const modal = document.getElementById('divmodal');
+const openModalButton = document.getElementById('openModal');
+const closeModalButton = document.querySelector('.close');
+
+// Abrir el modal
+openModalButton.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+// Cerrar el modal al hacer clic en el botón de cerrar
+closeModalButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Cerrar el modal al hacer clic fuera del contenido
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+    </script>
+
+</body>
+</html>
