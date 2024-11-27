@@ -1,3 +1,7 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -5,24 +9,82 @@ body {
   background-color: #f0f0f0;
 }
 
+/* Animacion header */
 header {
-  height: 300px;
-  background-image: url("../img/borroso3.jpg");
+  animation: cambia_imagen 6s infinite;
+  background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  height: 50vh;
+}
+
+@keyframes cambia_imagen {
+  0% {
+      background-image: url('../img/h1.webp');
+  }
+
+  50% {
+      background-image: url('../img/h2.webp');
+  }
+
+  100% {
+      background-image: url('../img/h0.jpg');
+  }
+}
+
+/*  Animacion */
+.slider {
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.slides {
+  display: flex;
+  animation: slide 9s infinite;
+}
+
+.slides img {
+  width: 60%;
+  height: auto;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+
+  33% {
+      transform: translateX(-100%);
+  }
+
+  66% {
+      transform: translateX(-200%);
+  }
+
+  100% {
+      transform: translateX(0);
+  }
 }
 
 nav {
   display: flex;
   justify-content: center;
-  font-size: x-large;
   font-weight: bold;
   position: sticky;
   top: 0px;
+  justify-content: space-evenly;
 }
 
 nav a {
+  background-color: whitesmoke;
+  color: black;
   padding: 5px;
   margin: 10px;
   text-shadow: #1d1d1d;
@@ -31,7 +93,6 @@ nav a {
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
-  color: black;
 }
 
 nav a:hover {
@@ -50,6 +111,7 @@ section {
   width: 60%;
   height: 30%;
   background-color: yellow;
+  border-radius: 10px;
 }
 
 footer {
@@ -97,6 +159,7 @@ h1 {
 }
 
 .cart-item {
+  border-radius: 10px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -264,6 +327,7 @@ body {
 }
 
 .caracteristica {
+  border-radius: 10px;
   display: flex;
   background-color: black;
   color: #f0f0f0;
@@ -272,6 +336,7 @@ body {
 }
 
 .otra {
+  border-radius: 10px;
   display: flex;
   background-color: #f0f0f0;
   color: black;
@@ -298,6 +363,8 @@ body {
 
 
 button {
+  border-radius: 5px;
+  font-weight: bold;
   padding: 10px 15px;
   background-color: lightgreen;
   color: black;
