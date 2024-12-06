@@ -1,0 +1,12 @@
+/* Estilo personalizado para hacer las letras blancas */
+.navbar .nav-link, .navbar .navbar-brand {
+    color: white !important;
+}
+.navbar .btn {
+    background-color: white;
+    color: black !important;
+}
+.navbar .btn:hover {
+    background-color: #ddd;
+    color: black;
+}

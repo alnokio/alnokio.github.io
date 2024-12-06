@@ -69,12 +69,24 @@ body {
   background-color: #218838;
 }
 
-.borroso {
-  backdrop-filter: blur(50px);
-  width: 400px;
-  height: 300px;
-  border: 2px solid black;
-  border-radius: 10px;
-  text-align: center;
-  margin: 10px;
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.btn-primary {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #28a745;
+}
+
+
